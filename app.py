@@ -55,7 +55,7 @@ def timer_nit():
     if t_time == dt_now_jst_aware.time().hour:
         t_time = t_time + 1
     time__data = testtime.intmin()
-    if  time__data % 60 == 0 and time_data != time__data and hour_data >=7 and hour_data <=19:
+    if  time__data % 60 == 0 and time_data != time__data and hour_data >=7 and hour_data <=17:
         time_data = testtime.intmin()
         hour__data=testtime.inttime()
         time_p = timeint.readtime()

@@ -1,0 +1,16 @@
+body{
+    background-color:azure;
+}
+h2{
+    color:black;
+}
+.margin{
+    margin-left: 10px;
+}
+table {
+	border-collapse: collapse;
+}
+td {
+	border: solid 0.5px;
+	padding: 0.5em;
+}

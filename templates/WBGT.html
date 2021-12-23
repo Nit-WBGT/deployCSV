@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">    
+<link rel="stylesheet" href="wbgt.css">
+<title>暑さ指数</title>
+</head>
+<body>
+<h2>暑さ指数（WBGT）の表示</h2>
+<p id="Rtime"></p>
+<h4>このページでは現在の暑さ指数を表示しています</h4>
+    <p><span class="margin">暑さ指数は熱中症予防を目的とした、人体と外気との熱のやり取りに着目した指標です</span></p>    
+<h4>暑さ指数（WBGT）の見方</h4>
+<table>
+<tr>
+<td>温度基準</td>
+<td>注意事項</td>
+    
+</tr>    
+<tr>    
+<td bgcolor="red">危険(31以上)</td>   
+<td>外出はなるべく避け、涼しい室内に移動</td>      
+</tr>
+<tr>    
+<td bgcolor="orange">厳重警戒(28~31)</td>    
+<td>外出時は炎天下を避け、室内の温度上昇に注意</td>    
+</tr>
+<tr>
+<td bgcolor="yellow">警戒(25~28)</td>
+<td>運動や激しい作業をする際は、定期的に十分な休息を取り入れる</td>   
+</tr>
+<tr>    
+<td bgcolor="aqua">注意（25未満)</td>
+<td>一般に危険性は少ないが、激しい運動や重労働時には危険性がある</td>    
+</tr>        
+</table>  
+<h4>現在の暑さ指数（WBGT）</h4>
+<table>
+<tr>
+<td>体育館</td>
+<td>グラウンド(日向)</td>
+<td>グラウンド(日陰)</td>    
+</tr>    
+<tr>
+<td id="taikukan">  
+<?php    
+    
+$lines = file("../data/WBGT1/2021-12/2021-12-16.csv", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+echo $lines[count($lines)-1];
+
+?>
+</td>
+<td id="hinata"></td>    
+
+
+<td id="hikage"></td>    
+</tr>    
+</table>  
+ <script src="../htdocs/WBGT計データ/time.js" async></script>
+    
+</body>
+

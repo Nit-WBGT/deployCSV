@@ -1,0 +1,4 @@
+Flask
+tweepy
+requests-oauthlib
+oauthlib

@@ -31,7 +31,7 @@ def readWBGTdata(wbgtNum,date,path):
     for counter in range(1,4):
        num=str(counter)
        try:
-          csv_file = open(path + "WBGT" + num + "/"  + date + ".csv", "r", encoding="ms932", errors="", newline="" )
+          csv_file = open(path + "WBGT" + num + "/"  + date + ".csv", "r", encoding="utf-8", errors="", newline="" )
           
        except OSError as e:
           if counter == 1:
